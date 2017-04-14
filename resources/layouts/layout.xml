@@ -1,0 +1,3 @@
+<layout id="MainLayout">
+	<bitmap id="BigRingVR_Logo" x="center" y="center" filename="../drawables/BigRingVR_Logo_150.png" />
+</layout>

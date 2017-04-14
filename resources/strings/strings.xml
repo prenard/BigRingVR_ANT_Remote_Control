@@ -1,0 +1,9 @@
+<strings>
+    <string id="AppName">APP_ANT-Generic-CTRL</string>
+    <string id="menu_label_00">Lap</string>
+    <string id="menu_label_01">F - Full Screen</string>
+    <string id="menu_label_02">S - Screenshot</string>
+    <string id="menu_label_03">V - Dashboard Display</string>
+    <string id="menu_label_04">P - Profile Zoom</string>
+    <string id="menu_label_99">Quit</string>
+</strings>
