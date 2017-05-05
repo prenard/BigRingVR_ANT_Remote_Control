@@ -1,4 +1,6 @@
 using Toybox.WatchUi as Ui;
+using Toybox.Graphics as Gfx;
+using Toybox.System as Sys;
 
 class BigRingVR_ANT_Remote_ControlView extends Ui.View
 {
@@ -26,6 +28,9 @@ class BigRingVR_ANT_Remote_ControlView extends Ui.View
     {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+      
+        dc.setColor(Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLUE);
+
     }
 
     // Called when this View is removed from the screen. Save the
