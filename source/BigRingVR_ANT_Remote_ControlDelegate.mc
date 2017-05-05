@@ -22,14 +22,20 @@ class BigRingVR_ANT_Remote_ControlDelegate extends Ui.BehaviorDelegate
     function onBack()
     {
 		//
-		// Block Back Button on Main Screen to use it as LAP Button for non TouchScreen devices
+		// Back Button must be used to quit App
 		//
-
-		if(My_App.Garmin_Device_Type.equals("fr_230")
+        System.println("onBack()");
+		if (My_App.Garmin_Device_Type.equals("edge_520")
+		   or My_App.Garmin_Device_Type.equals("edge_820")
+		   or My_App.Garmin_Device_Type.equals("edge_1000"))
+		{
+			My_App.Quit();
+		}
+		else
+		if (My_App.Garmin_Device_Type.equals("fr_230")
 		  or My_App.Garmin_Device_Type.equals("fr_235")
 		  or My_App.Garmin_Device_Type.equals("fr_735xt")
-		  or My_App.Garmin_Device_Type.equals("fr_920xt")
-		  or My_App.Garmin_Device_Type.equals("edge_520"))
+		  or My_App.Garmin_Device_Type.equals("fr_920xt"))
 		{
 			My_App.SendAntCommandLap();
 		}
@@ -46,8 +52,9 @@ class BigRingVR_ANT_Remote_ControlDelegate extends Ui.BehaviorDelegate
 		//    04 = ENTER
 		//    05 = ESC
 		//    08 = DOWN
-		//    19 = LAP
 		//    13 = UP
+		//    18 = START
+		//    19 = LAP 
 		//    23 = MODE
 		//
 
@@ -56,7 +63,18 @@ class BigRingVR_ANT_Remote_ControlDelegate extends Ui.BehaviorDelegate
 		//
         System.println("Device_Type = " + My_App.Garmin_Device_Type);
         System.println("Event = " + event.getKey() );
-        
+
+		if(My_App.Garmin_Device_Type.equals("edge_520")
+		   or My_App.Garmin_Device_Type.equals("edge_820")
+		   or My_App.Garmin_Device_Type.equals("edge_1000"))
+		{
+		   	if(Ui.KEY_LAP == event.getKey())
+    			{
+        			// - 19 - LAP => Send ANT Lapp Command					
+					My_App.SendAntCommandLap();
+				}
+		}
+		else
 		if(My_App.Garmin_Device_Type.equals("fr_230")
 		   or My_App.Garmin_Device_Type.equals("fr_235")
 		   or My_App.Garmin_Device_Type.equals("fr_735xt")

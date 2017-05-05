@@ -41,6 +41,7 @@ class BigRingVR_ANT_Remote_ControlApp extends App.AppBase
 
     function SendAntCommandLap()
     {
+        System.println("SendAntCommandLap()");
         my_ANT_Generic_CTRL.Send_Command(36);
     }
 
