@@ -41,7 +41,7 @@ class BigRingVR_ANT_Remote_ControlApp extends App.AppBase
 
     function SendAntCommandLap()
     {
-        System.println("SendAntCommandLap()");
+        //System.println("SendAntCommandLap()");
         my_ANT_Generic_CTRL.Send_Command(36);
     }
 
@@ -65,6 +65,10 @@ class BigRingVR_ANT_Remote_ControlApp extends App.AppBase
         my_ANT_Generic_CTRL.Send_Command(32771);
     }
 
+    function SendAntCommandLapDisplayMode()
+    {
+        my_ANT_Generic_CTRL.Send_Command(32772);
+    }
 
     function Quit()
     {

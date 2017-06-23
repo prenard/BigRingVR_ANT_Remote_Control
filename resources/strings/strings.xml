@@ -1,9 +1,10 @@
 <strings>
     <string id="AppName">BigRingVR_ANT_Remote_Control</string>
-    <string id="menu_label_00">Lap</string>
-    <string id="menu_label_01">F - Full Screen</string>
-    <string id="menu_label_02">S - Screenshot</string>
-    <string id="menu_label_03">V - Dashboard Display</string>
-    <string id="menu_label_04">P - Profile Zoom</string>
+    <string id="menu_label_00">SPACE  - Lap</string>
+    <string id="menu_label_01">L - Lap Display Mode</string>
+    <string id="menu_label_02">F - Full Screen</string>
+    <string id="menu_label_03">S - Screenshot</string>
+    <string id="menu_label_04">V - Dashboard Display</string>
+    <string id="menu_label_05">P - Profile Zoom</string>
     <string id="menu_label_99">Quit</string>
 </strings>

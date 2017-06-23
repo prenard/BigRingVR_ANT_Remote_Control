@@ -24,17 +24,21 @@ class BigRingVR_ANT_Remote_ControlMenuDelegate extends Ui.MenuInputDelegate
         }
         else if (item == :item_01)
         {
-            My_App.SendAntCommandFullScreen();
+            My_App.SendAntCommandLapDisplayMode();
         }
         else if (item == :item_02)
         {
-            My_App.SendAntCommandScreenShoot();
+            My_App.SendAntCommandFullScreen();
         }
         else if (item == :item_03)
         {
-            My_App.SendAntCommandDashBoardDisplay();
+            My_App.SendAntCommandScreenShoot();
         }
         else if (item == :item_04)
+        {
+            My_App.SendAntCommandDashBoardDisplay();
+        }
+        else if (item == :item_05)
         {
             My_App.SendAntCommandProfileZoom();
         }
